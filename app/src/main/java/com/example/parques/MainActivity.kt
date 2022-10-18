@@ -11,11 +11,17 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
         val Tag = "NombreParque ";
         val TagCasillas = "Casillas ";
         val TagSpinner = "Spinner ";
+        */
+
+        val miDialogo = CuadroDialogo();
+
         binding.Boton.setOnClickListener {
 
+            /*
             Log.d(Tag, "el parque es: " +binding.Nombre.text + "\n")
             if (binding.DeportesCheckBox.isChecked) {
                 Log.d(TagCasillas, "el parque tiene casillas: " +binding.DeportesCheckBox.text + "\n")
@@ -33,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             Log.d(TagSpinner, "el parque Abre: " +binding.HorarioAperturaSpinner.selectedItem + "\n")
             Log.d(TagSpinner, "el parque Cierra: " +binding.HorarioCierreSpinner.selectedItem + "\n")
 
+            */
+
+            miDialogo.show(supportFragmentManager, "miDialogo")
         }
     }
 
