@@ -2,47 +2,10 @@ package com.example.parques
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.parques.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ActivityWhitMenus() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        /*
-        val Tag = "NombreParque ";
-        val TagCasillas = "Casillas ";
-        val TagSpinner = "Spinner ";
-        */
-
-        val miDialogo = CuadroDialogo();
-
-        binding.Boton.setOnClickListener {
-
-            /*
-            Log.d(Tag, "el parque es: " +binding.Nombre.text + "\n")
-            if (binding.DeportesCheckBox.isChecked) {
-                Log.d(TagCasillas, "el parque tiene casillas: " +binding.DeportesCheckBox.text + "\n")
-            }
-            if (binding.ParqueInfantilCheckBox.isChecked) {
-                Log.d(TagCasillas, "el parque tiene casillas: " +binding.ParqueInfantilCheckBox.text + "\n")
-            }
-            if (binding.RestauranteCheckBox.isChecked) {
-                Log.d(TagCasillas, "el parque tiene casillas: " +binding.RestauranteCheckBox.text + "\n")
-            }
-            if (binding.ZonaDeMascotasCheckBox.isChecked) {
-                Log.d(TagCasillas, "el parque tiene casillas: " +binding.ZonaDeMascotasCheckBox.text + "\n")
-            }
-
-            Log.d(TagSpinner, "el parque Abre: " +binding.HorarioAperturaSpinner.selectedItem + "\n")
-            Log.d(TagSpinner, "el parque Cierra: " +binding.HorarioCierreSpinner.selectedItem + "\n")
-
-            */
-
-            miDialogo.show(supportFragmentManager, "miDialogo")
-        }
+        setContentView(R.layout.activity_main)
     }
-
 }
